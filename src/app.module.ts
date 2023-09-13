@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Module } from "@nestjs/common";
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
+import { UserMicroserviceModule } from "./microservices/user-microservice.module";
 
 @Module({
-  imports: [],
+  imports: [UserMicroserviceModule],
   controllers: [AppController],
   providers: [AppService],
 })
